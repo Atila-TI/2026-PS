@@ -1,10 +1,62 @@
-catalogo = [
-    {"titulo": "O Programador Pragmático", "autor": "Andrew Hunt", "disponivel": True},
-    {"titulo": "Código Limpo", "autor": "Robert C. Martin", "disponivel": False},
-    {"titulo": "Padrões de Projeto", "autor": "Erich Gamma", "disponivel": True},
-]
+# Centralizar o nome evita erros de digitação em todo o código
+ARQUIVO = "biblioteca.txt"
+SEPARADOR = "|"  # separa campos em cada linha do .txt
+# Formato de cada linha no arquivo:
+#   titulo|autor|disponivel
+# Exemplo:
+#   Código Limpo|Robert C. Martin|False
 
-def listar_livros():
+def carregar_catalogo():
+    """Lê o .txt e reconstrói a lista de dicionários."""
+
+    catalogo = []
+
+    try:
+        # 'r' = leitura | encoding='utf-8' garante acentos corretos
+        with open(ARQUIVO, "r", encoding="utf-8") as f:
+            for linha in f:
+                linha = linha.strip()
+
+                if not linha:  # ignora linhas vazias
+                    continue
+
+                partes = linha.split(SEPARADOR)
+
+                if len(partes) != 3:  # linha malformada → pula
+                    continue
+
+                titulo, autor, disponivel_str = partes
+
+                catalogo.append({
+                    "titulo": titulo,
+                    "autor": autor,
+                    # a string "True" no arquivo precisa virar bool True
+                    "disponivel": disponivel_str == "True"
+                })
+
+    except FileNotFoundError:
+        pass  # primeira execução: arquivo ainda não existe — tudo bem
+
+    return catalogo
+
+def salvar_catalogo(catalogo):
+    """Grava toda a lista no arquivo .txt."""
+
+    try:
+        # 'w' = write: cria se não existir, sobrescreve se existir
+        with open(ARQUIVO, "w", encoding="utf-8") as f:
+            for livro in catalogo:
+                linha = f"{livro['titulo']}{SEPARADOR}{livro['autor']}{SEPARADOR}{livro['disponivel']}\n"
+                f.write(linha)
+
+        print(f"💾 Catálogo salvo em '{ARQUIVO}'.")
+
+    except IOError as e:
+        # IOError: disco cheio, permissão negada, etc.
+        print(f"❌ Erro ao salvar: {e}")
+
+
+def listar_livros(catalogo):
     """Exibe todos os livros com numeração e status."""
 
     print("\n" + "=" * 50)
@@ -21,7 +73,7 @@ def listar_livros():
 
     print("=" * 50)
 
-def adicionar_livro():
+def adicionar_livro(catalogo):
     """Coleta dados via input e adiciona um novo livro ao catálogo."""
 
     print("\n--- Adicionar Novo Livro ---")
@@ -41,7 +93,7 @@ def adicionar_livro():
 
     print(f"✅  '{titulo}' adicionado com sucesso!")
 
-def buscar_livro():
+def buscar_livro(catalogo):
     print("\n--- Buscar Livro ---")
     termo = input("Digite parte do título: ").strip().lower()
 
@@ -61,7 +113,7 @@ def buscar_livro():
     except Exception as e:
         print(f"❌ Erro inesperado: {e}")
 
-def registrar_emprestimo():
+def registrar_emprestimo(catalogo):
     listar_livros()
 
     if not catalogo:
@@ -87,8 +139,8 @@ def registrar_emprestimo():
     except ValueError:
         print("❌ Entrada inválida. Digite apenas o número.")
 
-def devolver_livro():
-    listar_livros()
+def devolver_livro(catalogo):
+    listar_livros(catalogo)
 
     if not catalogo:
         return
