@@ -1,0 +1,24 @@
+# Arquivos de dados do hotel de pets (teste)
+2026-PS/02_poo/pets.bin
+2026-PS/02_poo/pets.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema
+.DS_Store
+Thumbs.db

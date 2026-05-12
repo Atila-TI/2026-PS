@@ -1,0 +1,13 @@
+=== LISTA DE PETS DO HOTEL ===
+
+Pet 1:
+Nome: Terror
+Espécie: Cachorro
+Idade: 3
+Dono: Billy Bruto
+Peso: 6.7 kg
+Vacinado: Sim
+Hospedado: Sim
+Diária: R$ 100.00
+----------------------------------------
+
