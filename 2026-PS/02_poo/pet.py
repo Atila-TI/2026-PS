@@ -124,8 +124,9 @@ class Pet:
 if __name__ == '__main__':
     # CRIANDO 3 OBJETOS (instâncias) DA CLASSE PET
     pet1 = Pet("Rex", "Cachorro", 5, "João", 20.5, True)
-    pet2 = Pet("Cupcake", "Dragão", 500, "Guto", 100000.75, False)
+    pet2 = Pet("Cupcake", "Dragão", 500, "Ana", 100000.75, False)
     pet3 = Pet("Luna", "Cerberus", 100000, "Satãn", 1000.55, True)
+    pet4 = Pet("UUUUUUH" , "Forte", 1000, "Guto", 1000.55, True)
 
     # === TESTANDO PET 1 ===
     pet1.exibir_dados()  # Mostra dados iniciais
