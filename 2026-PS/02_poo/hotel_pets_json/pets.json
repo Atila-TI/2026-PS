@@ -1,0 +1,38 @@
+[
+    {
+        "nome": "Artur",
+        "especie": "Cachorro",
+        "idade": 15,
+        "peso": 67.67,
+        "nome_dono": "Gabriele",
+        "vacinado": true,
+        "hospedado": false
+    },
+    {
+        "nome": "Gustavo Maciel",
+        "especie": "Capacho",
+        "idade": 16,
+        "peso": 81.69,
+        "nome_dono": "Mayara",
+        "vacinado": true,
+        "hospedado": false
+    },
+    {
+        "nome": "Atila",
+        "especie": "Carente",
+        "idade": 17,
+        "peso": 99.99,
+        "nome_dono": "Sara",
+        "vacinado": true,
+        "hospedado": false
+    },
+    {
+        "nome": "Ana Vitoria",
+        "especie": "Coala",
+        "idade": 16,
+        "peso": 23.55,
+        "nome_dono": "Nathy",
+        "vacinado": false,
+        "hospedado": false
+    }
+]
