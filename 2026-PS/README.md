@@ -36,10 +36,10 @@ Autoavaliacao: esta secao do README
 Conceito pretendido: [ C ]
 
 Justificativa (cite a classe/metodo de cada criterio):
- Eu sei ultiliar os conceitos aprendidos nesse trimestre bem, porém, falo gravemente na hora de explicalos, o que complica meus concitos
+ Eu sei ultiliar os conceitos aprendidos nesse trimestre bem, porém, falo gravemente na hora de explicalos, o que complica meus conceitos
 
-- Ex 1-2 (arrays + metodos): calcularMedia(...) e contarAprovados(...)
-- Ex 3 (ArrayList): adicionarProduto(...) e listarProdutos(...)
-- Ex 4 (sobrecarga): maiorValor(int[]) e maiorValor(int, int)
-- Ex 5 (integracao): exibirBoletim reaproveita os metodos 1 e 2
-- Autoavaliacao: esta secao do README
+- Ex 1-2 (arrays + métodos): `calcularMedia(double[] notas)` e `contarAprovados(double[] notas)`
+- Ex 3 (ArrayList): `adicionarProduto(ArrayList<String> lista, String nome)` e `listarProdutos(ArrayList<String> lista)`
+- Ex 4 (sobrecarga): `maiorValor(int[] valores)` e `maiorValor(int a, int b)`
+- Ex 5 (integração): `exibirBoletim(double[] notas)` reaproveita `calcularMedia(...)` e `contarAprovados(...)`
+- Exemplo adicional: `contarAcimaDaMedia(int[] valores)` mostra uso de média e condição
