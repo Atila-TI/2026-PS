@@ -29,3 +29,17 @@ Conteúdo completo de revisão dos fundamentos da linguagem, organizado de forma
 * 💻 **Programação de Sistemas | 2026**
 
 Este material é de caráter educacional. Sinta-se livre para estudar, modificar e compartilhar o conhecimento!
+
+Autoavaliacao: esta secao do README
+
+## 🎯 Autoavaliacao
+Conceito pretendido: [ C ]
+
+Justificativa (cite a classe/metodo de cada criterio):
+ Eu sei ultiliar os conceitos aprendidos nesse trimestre bem, porém, falo gravemente na hora de explicalos, o que complica meus concitos
+
+- Ex 1-2 (arrays + metodos): calcularMedia(...) e contarAprovados(...)
+- Ex 3 (ArrayList): adicionarProduto(...) e listarProdutos(...)
+- Ex 4 (sobrecarga): maiorValor(int[]) e maiorValor(int, int)
+- Ex 5 (integracao): exibirBoletim reaproveita os metodos 1 e 2
+- Autoavaliacao: esta secao do README
